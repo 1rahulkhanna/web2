@@ -1,4 +1,42 @@
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+      background-color: #94bfdf; /* Change to orange color */
+
+    }
+    50% {
+      transform: translateY(-30px);
+      background-color: #65b3eb; /* Change to orange color */
+
+    }
+    100% {
+      transform: translateY(0);
+      background-color: #1ea6e5; /* Change to orange color */
+
+    }
+
+  }
+  @keyframes colchange {
+    0% {
+        background-color: #94bfdf; /* Change to orange color */
+  
+      }
+      50% {
+        background-color: #359fea; /* Change to orange color */
+  
+      }
+      100% {
+        background-color: #94bfdf; /* Change to orange color */
+  
+      }  
+    
+  }
+  
 a{
     color: #11999E;
     font-family: 'IM Fell French Canon SC', serif;  
@@ -9,6 +47,9 @@ a{
 a:hover{
     coLOr: #eaf6f6;
 }
+
+  
+  
 body{
     margin: 0px;
     text-align: center;
@@ -114,6 +155,11 @@ p{
 }
 .middle-container {
     margin: 100px 0;
+    transition: tranform 2s ease;
+    /* animation: colchange 2s ease-in-out infinite; */
+}
+.middle-container:hover{
+    animation: colchange 2s ease-in-out infinite;
 }
 .pro{
     text-decoration: underline;
@@ -130,8 +176,15 @@ p{
     width: 50%;
     margin: 100px auto 100px auto;
     text-align: left;
+    transition: transform 0.3s ease;
+    
     
 }
+.skill-row:hover {
+    transform: scale(1.1); /* Apply the transformation on hover */
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
 .s1{
     width: 30%;
     float: left;
